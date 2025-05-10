@@ -36,4 +36,19 @@
 [[redirects]]
   from = "/shop"
   to = "/shop.html"
+  status = 200
+
+[[redirects]]
+  from = "/AIlanding"
+  to = "/ai-landing.html"
+  status = 200
+
+[[redirects]]
+  from = "/cryptolanding"
+  to = "/crypto-landing.html"
+  status = 200
+
+[[redirects]]
+  from = "/starslanding"
+  to = "/stars-landing.html"
   status = 200 
