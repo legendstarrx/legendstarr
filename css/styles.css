@@ -174,29 +174,40 @@ body {
 }
 
 @media (min-width: 900px) {
-    .hero-section .hero-content {
-        max-width: 650px !important;
-        padding: 0 3vw !important;
-        font-size: 1.18rem;
+    .hero-content {
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        padding: 0 2vw !important;
     }
-    .hero-section .hero-heading {
-        font-size: 3.2rem !important;
-        margin-bottom: 1.2rem !important;
+    .hero-heading {
+        font-size: 5rem !important;
+        font-weight: 900 !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 2rem !important;
+        line-height: 1.1 !important;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.18);
     }
-    .hero-section .hero-subheading {
-        font-size: 1.35rem !important;
-        margin-bottom: 1.1rem !important;
+    .hero-subheading {
+        font-size: 2.2rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 1.5rem !important;
+        color: #fff !important;
+        line-height: 1.4 !important;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.12);
     }
-    .hero-section .hero-supporting {
-        font-size: 1.18rem !important;
-        margin-bottom: 1.1rem !important;
+    .hero-supporting {
+        font-size: 1.5rem !important;
+        font-weight: 400 !important;
+        margin-bottom: 2.5rem !important;
+        color: #e0e0e0 !important;
+        line-height: 1.7 !important;
     }
-    .hero-section .hero-btn {
-        font-size: 1.18rem !important;
-        padding: 1.2rem 3rem !important;
-    }
-    .hero-section .hero-overlay {
-        background: rgba(10, 13, 18, 0.62) !important;
+    .hero-btn {
+        font-size: 1.4rem !important;
+        padding: 1.3rem 3.5rem !important;
+        font-weight: 800 !important;
+        border-radius: 10px !important;
+        margin-top: 1rem !important;
     }
 }
 
