@@ -39,7 +39,7 @@
   status = 200
 
 [[redirects]]
-  from = "/AIlanding"
+  from = "/ailanding"
   to = "/ai-landing.html"
   status = 200
 
