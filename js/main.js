@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mission/Feature Section Randomizer
     const missions = [
         {
-            icon: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="28" r="28" fill="#fff" fill-opacity="0.08"/><path d="M36 40H20V38C20 36.3431 21.3431 35 23 35H33C34.6569 35 36 36.3431 36 38V40Z" fill="#fff"/><path d="M28 16C24.134 16 21 19.134 21 23C21 26.866 24.134 30 28 30C31.866 30 35 26.866 35 23C35 19.134 31.866 16 28 16ZM28 28C25.2386 28 23 25.7614 23 23C23 20.2386 25.2386 18 28 18C30.7614 18 33 20.2386 33 23C33 25.7614 30.7614 28 28 28Z" fill="#fff"/></svg>`,
+            icon: `<img src="images/logo.png" alt="Legendstarr Logo" style="width:56px;height:56px;">`,
             title: "AI <span class='bold'>MASTERY</span>",
             desc: [
                 "Turn AI into your personal money machine.",
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
             btn: { text: "JOIN THE COURSE", link: "ai-mastery.html" }
         },
         {
-            icon: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="28" r="28" fill="#fff" fill-opacity="0.08"/><path d="M36 40H20V38C20 36.3431 21.3431 35 23 35H33C34.6569 35 36 36.3431 36 38V40Z" fill="#fff"/><path d="M28 16C24.134 16 21 19.134 21 23C21 26.866 24.134 30 28 30C31.866 30 35 26.866 35 23C35 19.134 31.866 16 28 16ZM28 28C25.2386 28 23 25.7614 23 23C23 20.2386 25.2386 18 28 18C30.7614 18 33 20.2386 33 23C33 25.7614 30.7614 28 28 28Z" fill="#fff"/></svg>`,
+            icon: `<img src="images/logo.png" alt="Legendstarr Logo" style="width:56px;height:56px;">`,
             title: "CRYPTO <span class='bold'>TRADING</span>",
             desc: [
                 "Profit from crypto—no guesswork, no hype.",
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
             btn: { text: "JOIN THE MASTERMIND", link: "crypto-trading.html" }
         },
         {
-            icon: `<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="28" r="28" fill="#fff" fill-opacity="0.08"/><path d="M36 40H20V38C20 36.3431 21.3431 35 23 35H33C34.6569 35 36 36.3431 36 38V40Z" fill="#fff"/><path d="M28 16C24.134 16 21 19.134 21 23C21 26.866 24.134 30 28 30C31.866 30 35 26.866 35 23C35 19.134 31.866 16 28 16ZM28 28C25.2386 28 23 25.7614 23 23C23 20.2386 25.2386 18 28 18C30.7614 18 33 20.2386 33 23C33 25.7614 30.7614 28 28 28Z" fill="#fff"/></svg>`,
+            icon: `<img src="images/logo.png" alt="Legendstarr Logo" style="width:56px;height:56px;">`,
             title: "THE <span class='bold'>STARS</span>",
             desc: [
                 "A global brotherhood for ambitious individuals.",

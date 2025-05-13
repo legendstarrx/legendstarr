@@ -1,0 +1,10 @@
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-left img {
+    height: 32px;
+    width: auto;
+} 
