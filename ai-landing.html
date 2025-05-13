@@ -215,6 +215,15 @@
                 padding-right: 4vw !important;
             }
         }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .navbar-left img {
+            height: 24px;
+            width: auto;
+        }
     </style>
 </head>
 <body class="body" style="min-height:100vh;">
@@ -222,6 +231,7 @@
         <nav class="navbar">
             <div class="navbar-left">
                 <a href="index.html" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;">LEGEND</a>
+                <img src="images/logo.png" alt="Legendstarr Logo" style="height:24px;width:auto;">
             </div>
             <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
                 <span></span>
@@ -240,7 +250,10 @@
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu-overlay" id="mobile-menu-overlay">
             <div class="mobile-menu-header">
-                <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;">LEGEND</span>
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;">LEGEND</span>
+                    <img src="images/logo.png" alt="Legendstarr Logo" style="height:24px;width:auto;">
+                </div>
                 <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
             </div>
             <ul class="mobile-menu-list">
