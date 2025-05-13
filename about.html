@@ -3,83 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Legendstarr</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/menu-style.css">
-    <link rel="stylesheet" href="css/footer-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- 100% privacy-first analytics -->
-    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <style>
-        .about-hero {
-            min-height: 60vh;
-            background: linear-gradient(120deg, #FFD700 0%, #FFB300 100%), url('https://images.unsplash.com/photo-1465101178521-c1a9136a3fdc?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .about-hero-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(120deg, rgba(255,215,0,0.18) 0%, rgba(10,13,18,0.82) 100%);
-            z-index: 2;
-        }
-        .about-hero-content {
-            position: relative;
-            z-index: 3;
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-            color: #fff;
-            padding: 3rem 2rem;
-        }
-        .about-title {
-            font-size: 2.8rem;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 1.2rem;
-            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .about-desc {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 2.2rem;
-            opacity: 0.98;
-            line-height: 1.5;
-        }
-        .about-section {
-            background: #181c22;
-            color: #FFD700;
-            padding: 3rem 0 2rem 0;
-            text-align: center;
-        }
-        .about-section h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 1.2rem;
-            color: #FFD700;
-        }
-        .about-section p {
-            max-width: 700px;
-            margin: 0 auto 1.5rem auto;
-            font-size: 1.15rem;
-            color: #fff;
-        }
-    </style>
+    <title>about | Legendstarr</title>
+    <!-- Header will be loaded here -->
+    <script src="js/header.js"></script>
 </head>
 <body class="body" style="min-height:100vh;">
     <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column;">
-        <!-- Header Placeholder -->
-        <div id="header-placeholder"></div>
-        <!-- Mobile Menu Placeholder -->
-        <div id="mobile-menu-placeholder"></div>
+        <!-- Header -->
+        <!-- Header will be loaded here -->
+            <ul class="mobile-menu-list">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="mobile-menu-actions">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </div>
         <main style="flex:1;">
             <section class="about-hero">
                 <div class="about-hero-overlay"></div>
@@ -135,8 +75,5 @@
         </div>
     </div>
     <script src="js/main.js"></script>
-    <script src="js/header.js"></script>
-    <script>
-    </script>
 </body>
 </html> 

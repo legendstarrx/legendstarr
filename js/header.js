@@ -4,47 +4,23 @@ async function loadHeader() {
         const response = await fetch('/header.html');
         const html = await response.text();
         
-        // Create a temporary container
-        const temp = document.createElement('div');
-        temp.innerHTML = html;
-        
-        // Get the header content
-        const headerContent = temp.querySelector('nav');
-        const mobileMenuContent = temp.querySelector('.mobile-menu-overlay');
-        
-        // Find the header placeholder
-        const headerPlaceholder = document.querySelector('#header-placeholder');
-        const mobileMenuPlaceholder = document.querySelector('#mobile-menu-placeholder');
-        
-        if (headerPlaceholder && headerContent) {
-            headerPlaceholder.replaceWith(headerContent);
+        // Extract head content
+        const headMatch = html.match(/<head>([\s\S]*?)<\/head>/);
+        if (headMatch) {
+            const headContent = headMatch[1];
+            // Replace the current head content
+            document.head.innerHTML = headContent;
         }
         
-        if (mobileMenuPlaceholder && mobileMenuContent) {
-            mobileMenuPlaceholder.replaceWith(mobileMenuContent);
+        // Extract body content (navbar)
+        const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/);
+        if (bodyMatch) {
+            const bodyContent = bodyMatch[1];
+            // Insert the navbar at the beginning of the body
+            document.body.insertAdjacentHTML('afterbegin', bodyContent);
         }
-        
-        // Reinitialize any necessary event listeners
-        initializeMobileMenu();
     } catch (error) {
         console.error('Error loading header:', error);
-    }
-}
-
-// Function to initialize mobile menu
-function initializeMobileMenu() {
-    const mobileToggle = document.getElementById('navbar-mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu-overlay');
-    const mobileClose = document.getElementById('mobile-menu-close');
-    
-    if (mobileToggle && mobileMenu && mobileClose) {
-        mobileToggle.addEventListener('click', () => {
-            mobileMenu.classList.add('active');
-        });
-        
-        mobileClose.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-        });
     }
 }
 
