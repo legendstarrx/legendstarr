@@ -1,193 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Common Header Content -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Legendstarr</title>
-    <meta name="description" content="Legendstarr – Millionaire and expert in making money online. We teach you how to use AI, web development, and crypto to achieve real wealth and freedom. Join our movement and change your life with proven strategies, mentorship, and a global community of winners.">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Legendstarr | AI & Web Development Expert">
-    <meta property="og:description" content="I'm Legendstarr - AI & Web Development Expert. I teach people how to use AI to build web apps and create content to make millions.">
-    <meta property="og:image" content="images/preview-image.png">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Legendstarr | AI & Web Development Expert">
-    <meta name="twitter:description" content="I'm Legendstarr - AI & Web Development Expert. I teach people how to use AI to build web apps and create content to make millions.">
-    <meta name="twitter:image" content="images/preview-image.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/menu-style.css">
     <link rel="stylesheet" href="css/footer-styles.css">
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <!-- Begin Brevo Form -->
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <!-- 100% privacy-first analytics -->
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <style>
-        /* Custom Brevo form overrides */
-        .sib-form input[type="text"], .sib-form input[type="email"] {
-            background: #181c22 !important;
-            color: #FFD700 !important;
-            border: 2px solid #FFD700 !important;
-            border-radius: 6px !important;
-            padding: 1rem 1.2rem !important;
-            font-size: 1.1rem !important;
-            font-family: 'League Spartan', Arial, sans-serif !important;
-            box-shadow: none !important;
-        }
-        .sib-form button,
-        .sib-form-block__button {
-            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%) !important;
-            color: #181c22 !important;
-            font-weight: 900 !important;
-            border-radius: 6px !important;
-            padding: 1rem 2.5rem !important;
-            font-size: 1.1rem !important;
-            border: none !important;
-            text-transform: uppercase !important;
-            letter-spacing: 1px !important;
-            box-shadow: 0 2px 12px rgba(255,215,0,0.18) !important;
-            font-family: 'League Spartan', Arial, sans-serif !important;
-        }
-        .sib-form input::placeholder {
-            color: #FFD700 !important;
-            opacity: 0.8 !important;
-        }
-        .sib-form .sib-form-block__button svg {
-            display: none !important;
-        }
-        .sib-form .sib-form-message-panel {
-            border-radius: 6px !important;
-            font-family: 'League Spartan', Arial, sans-serif !important;
-        }
-        .sib-form .sib-form-message-panel__inner-text {
-            color: #FFD700 !important;
-        }
-        .sib-form .sib-powered-by {
-            display: none !important;
-        }
-        .sib-form,
-        .sib-form-container,
-        #sib-container {
-            background: #181c22 !important;
-        }
-        .navbar-left {
+        .contact-hero {
+            min-height: 40vh;
+            background: linear-gradient(120deg, #FFD700 0%, #FFB300 100%);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            position: relative;
         }
-        .navbar-left img {
-            height: 32px;
-            width: auto;
+        .contact-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: #181c22;
+            padding: 3rem 2rem;
+        }
+        .contact-title {
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-section {
+            background: #181c22;
+            color: #FFD700;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: #FFD700;
+        }
+        .contact-form {
+            max-width: 480px;
+            margin: 0 auto 2rem auto;
+            background: #101318;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 2px 18px rgba(255,215,0,0.10);
+        }
+        .contact-form label {
+            display: block;
+            text-align: left;
+            color: #FFD700;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid #FFD700;
+            border-radius: 6px;
+            background: #181c22;
+            color: #FFD700;
+            font-size: 1.08rem;
+            font-family: 'League Spartan', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            color: #181c22;
+            font-weight: 900;
+            border-radius: 6px;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 12px rgba(255,215,0,0.18);
+            font-family: 'League Spartan', Arial, sans-serif;
+            cursor: pointer;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .contact-form button:hover {
+            box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.45);
+            transform: scale(1.04);
+        }
+        .contact-info {
+            color: #fff;
+            font-size: 1.08rem;
+            margin-top: 2rem;
+        }
+        .contact-info a {
+            color: #FFD700;
+            text-decoration: underline;
         }
     </style>
 </head>
-<body class="body">
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </a>
-        </div>
-        <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="navbar-right">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </nav>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </span>
-            <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
-        </div>
-        <ul class="mobile-menu-list">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="mobile-menu-actions">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </div>
-    <div class="section-separator"></div>
-    
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </a>
-        </div>
-        <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="navbar-right">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </nav>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </span>
-            <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
-        </div>
-        <ul class="mobile-menu-list">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="mobile-menu-actions">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </div>
-    <div class="section-separator"></div> 
-
+<body class="body" style="min-height:100vh;">
     <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column;">
         <!-- Header -->
-        <!-- Header will be loaded here -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
+                    <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                    LEGEND
+                </a>
+            </div>
+            <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="navbar-right">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-header">
+                <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
+                    <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                    LEGEND
+                </span>
+                <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
+            </div>
             <ul class="mobile-menu-list">
                 <li><a href="/aimastery">AI</a></li>
                 <li><a href="/crypto">CRYPTO</a></li>
@@ -241,5 +200,3 @@
     <script src="js/main.js"></script>
 </body>
 </html> 
-</body>
-</html>

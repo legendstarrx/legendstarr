@@ -1,40 +1,20 @@
 // Initialize Swiper
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu handling
-    const mobileToggle = document.getElementById('navbar-mobile-toggle');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
     
-    if (mobileToggle && mobileMenuOverlay) {
-        mobileToggle.addEventListener('click', function() {
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        });
-    }
-    
-    if (mobileMenuClose && mobileMenuOverlay) {
-        mobileMenuClose.addEventListener('click', function() {
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
-        });
-    }
-    
-    // Close overlay when a menu link is clicked
-    if (mobileMenuOverlay) {
-        mobileMenuOverlay.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenuOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Restore scrolling
-            });
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     }
 
-    // Close overlay when clicking outside
-    document.addEventListener('click', function(e) {
-        if (mobileMenuOverlay && mobileMenuOverlay.classList.contains('active')) {
-            if (!mobileMenuOverlay.contains(e.target) && e.target !== mobileToggle) {
-                mobileMenuOverlay.classList.remove('active');
-                document.body.style.overflow = ''; // Restore scrolling
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.nav-menu')) {
+            if (navLinks) {
+                navLinks.classList.remove('active');
             }
         }
     });
@@ -145,9 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 // Close mobile menu if open
-                if (mobileMenuOverlay) {
-                    mobileMenuOverlay.classList.remove('active');
-                    document.body.style.overflow = ''; // Restore scrolling
+                if (navLinks) {
+                    navLinks.classList.remove('active');
                 }
                 // Scroll to target
                 target.scrollIntoView({
@@ -184,18 +163,32 @@ document.addEventListener('DOMContentLoaded', function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        // No fade effect, just slide
         speed: 700
     });
 
     // Wisdom tabs control slider
     const wisdomTabs = document.querySelectorAll('.wisdom-tab');
-    if (wisdomTabs.length > 0) {
-        wisdomTabs.forEach((tab, index) => {
-            tab.addEventListener('click', () => {
-                wisdomSlider.slideTo(index);
-            });
+    wisdomTabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            const slideIndex = parseInt(this.getAttribute('data-slide'), 10);
+            if (!isNaN(slideIndex)) {
+                wisdomSlider.slideToLoop(slideIndex);
+            }
         });
-    }
+    });
+
+    // Update active tab on slide change
+    wisdomSlider.on('slideChange', function() {
+        const realIndex = wisdomSlider.realIndex;
+        wisdomTabs.forEach((tab, idx) => {
+            if (idx === realIndex) {
+                tab.classList.add('active');
+            } else {
+                tab.classList.remove('active');
+            }
+        });
+    });
 
     // Mission/Feature Section Randomizer
     const missions = [
@@ -254,6 +247,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Only run randomizeMissionSection on the home page
     if (document.querySelector('.mission-bg')) {
         window.addEventListener('DOMContentLoaded', randomizeMissionSection);
+    }
+
+    // Hamburger menu toggle for mobile (overlay)
+    const mobileToggle = document.getElementById('navbar-mobile-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    
+    if (mobileToggle && mobileMenuOverlay) {
+        mobileToggle.addEventListener('click', function() {
+            mobileMenuOverlay.classList.add('active');
+        });
+    }
+    if (mobileMenuClose && mobileMenuOverlay) {
+        mobileMenuClose.addEventListener('click', function() {
+            mobileMenuOverlay.classList.remove('active');
+        });
+    }
+    // Close overlay when a menu link is clicked
+    if (mobileMenuOverlay) {
+        mobileMenuOverlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuOverlay.classList.remove('active');
+            });
+        });
     }
 });
 

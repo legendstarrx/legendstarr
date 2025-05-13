@@ -1,23 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Common Header Content -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Landing | Legendstarr</title>
-    <meta name="description" content="Legendstarr – Millionaire and expert in making money online. We teach you how to use AI, web development, and crypto to achieve real wealth and freedom. Join our movement and change your life with proven strategies, mentorship, and a global community of winners.">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Legendstarr | AI & Web Development Expert">
-    <meta property="og:description" content="I'm Legendstarr - AI & Web Development Expert. I teach people how to use AI to build web apps and create content to make millions.">
-    <meta property="og:image" content="images/preview-image.png">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Legendstarr | AI & Web Development Expert">
-    <meta name="twitter:description" content="I'm Legendstarr - AI & Web Development Expert. I teach people how to use AI to build web apps and create content to make millions.">
-    <meta name="twitter:image" content="images/preview-image.png">
+    <title>Crypto Trading | Legendstarr</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -26,22 +12,16 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     
-    <!-- CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/menu-style.css">
     <link rel="stylesheet" href="css/footer-styles.css">
-    
-    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <!-- Begin Brevo Form -->
-    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
     <!-- 100% privacy-first analytics -->
     <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <style>
+        body { background: #101318; }
         /* Custom Brevo form overrides */
         .sib-form input[type="text"], .sib-form input[type="email"] {
             background: #181c22 !important;
@@ -52,6 +32,9 @@
             font-size: 1.1rem !important;
             font-family: 'League Spartan', Arial, sans-serif !important;
             box-shadow: none !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 0.5rem !important;
         }
         .sib-form button,
         .sib-form-block__button {
@@ -66,6 +49,9 @@
             letter-spacing: 1px !important;
             box-shadow: 0 2px 12px rgba(255,215,0,0.18) !important;
             font-family: 'League Spartan', Arial, sans-serif !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-top: 1rem !important;
         }
         .sib-form input::placeholder {
             color: #FFD700 !important;
@@ -88,6 +74,150 @@
         .sib-form-container,
         #sib-container {
             background: #181c22 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        #sib-container {
+            padding: 0 !important;
+        }
+        .sib-form .sib-form-block {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .sib-form {
+            padding: 0 !important;
+        }
+        .product-hero {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #FFD700 0%, #FFB300 100%), url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+            overflow: hidden;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            box-sizing: border-box;
+        }
+        .product-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, rgba(255,215,0,0.18) 0%, rgba(10,13,18,0.82) 100%);
+            z-index: 2;
+        }
+        .product-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1);
+        }
+        .product-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .product-desc {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 2.2rem;
+            opacity: 0.98;
+            line-height: 1.5;
+            animation: fadeIn 1.8s cubic-bezier(.4,0,.2,1);
+        }
+        .product-benefits {
+            font-size: 1.15rem;
+            color: #FFD700;
+            margin-bottom: 2.2rem;
+            font-weight: 700;
+            animation: fadeIn 2.2s cubic-bezier(.4,0,.2,1);
+        }
+        .product-cta {
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            color: #181c22;
+            padding: 1.2rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.25);
+            margin-top: 0.5rem;
+            transition: box-shadow 0.3s, transform 0.3s;
+            animation: pulse 2.5s infinite;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .product-cta:hover {
+            box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.45);
+            transform: scale(1.04);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.25); }
+            50% { box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.45); }
+        }
+        .ai-proof-slider {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto 2.5rem auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 18px rgba(255,215,0,0.10);
+        }
+        .ai-proof-slider .swiper-slide img {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            object-fit: cover;
+            min-height: 260px;
+            max-height: 340px;
+        }
+        .ai-proof-slider .swiper-pagination-bullet {
+            background: #FFD700;
+            opacity: 1;
+        }
+        .ai-proof-slider .swiper-pagination-bullet-active {
+            background: #FFB300;
+        }
+        /* Add horizontal padding to main content sections */
+        .section,
+        .newsletter-section {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            box-sizing: border-box;
+        }
+        @media (max-width: 767px) {
+            .section,
+            .newsletter-section {
+                padding-left: 4vw !important;
+                padding-right: 4vw !important;
+            }
+            .product-hero {
+                padding-left: 4vw !important;
+                padding-right: 4vw !important;
+            }
         }
         .navbar-left {
             display: flex;
@@ -99,94 +229,36 @@
             width: auto;
         }
     </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
-<body class="body">
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </a>
-        </div>
-        <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="navbar-right">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </nav>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </span>
-            <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
-        </div>
-        <ul class="mobile-menu-list">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="mobile-menu-actions">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </div>
-    <div class="section-separator"></div>
-    
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="navbar-left">
-            <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </a>
-        </div>
-        <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="navbar-right">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </nav>
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-        <div class="mobile-menu-header">
-            <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
-                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
-                LEGEND
-            </span>
-            <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
-        </div>
-        <ul class="mobile-menu-list">
-            <li><a href="/aimastery">AI</a></li>
-            <li><a href="/crypto">CRYPTO</a></li>
-            <li><a href="/thestars">THE STARS</a></li>
-        </ul>
-        <div class="mobile-menu-actions">
-            <a href="/shop" class="nav-btn outline gold">SHOP</a>
-        </div>
-    </div>
-    <div class="section-separator"></div> 
-
+<body class="body" style="min-height:100vh;">
     <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column;">
-        <!-- Header will be loaded here -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="index.html" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;">LEGEND</a>
+                <img src="images/logo.png" alt="Legendstarr Logo" style="height:24px;width:auto;">
+            </div>
+            <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="navbar-right">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-header">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;">LEGEND</span>
+                    <img src="images/logo.png" alt="Legendstarr Logo" style="height:24px;width:auto;">
+                </div>
                 <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
             </div>
             <ul class="mobile-menu-list">
@@ -372,5 +444,3 @@
     </div>
 </body>
 </html> 
-</body>
-</html>
