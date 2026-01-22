@@ -12,9 +12,6 @@ export default function Footer() {
             </p>
             <div className="space-y-2 text-sm">
               <p className="text-gray-400">
-                <span className="text-gold font-semibold">Address:</span> 1013 Gama B
-              </p>
-              <p className="text-gray-400">
                 <span className="text-gold font-semibold">Business Phone:</span>{' '}
                 <a href="tel:+2349162923389" className="hover:text-gold transition-colors">
                   +234 916 292 3389
