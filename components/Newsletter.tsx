@@ -6,21 +6,38 @@ import AnimatedSection from './AnimatedSection'
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // TODO: Replace with your actual newsletter API endpoint
-    // For now, this is a placeholder that simulates success
+    if (!email) return
+    
+    setStatus('loading')
+    
     try {
-      // Example: await fetch('/api/newsletter', { method: 'POST', body: JSON.stringify({ email }) })
-      setStatus('success')
-      setEmail('')
-      setTimeout(() => setStatus('idle'), 3000)
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus('success')
+        setEmail('')
+        setTimeout(() => setStatus('idle'), 5000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 5000)
+      }
     } catch (error) {
+      console.error('Newsletter subscription error:', error)
       setStatus('error')
-      setTimeout(() => setStatus('idle'), 3000)
+      setTimeout(() => setStatus('idle'), 5000)
     }
   }
 
@@ -55,11 +72,12 @@ export default function Newsletter() {
               />
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gold text-black font-bold rounded-lg hover:bg-gold-300 transition-colors whitespace-nowrap"
+                disabled={status === 'loading'}
+                whileHover={status !== 'loading' ? { scale: 1.05 } : {}}
+                whileTap={status !== 'loading' ? { scale: 0.95 } : {}}
+                className="px-8 py-4 bg-gold text-black font-bold rounded-lg hover:bg-gold-300 transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe
+                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
               </motion.button>
             </div>
 
