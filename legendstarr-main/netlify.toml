@@ -1,0 +1,54 @@
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/aimastery"
+  to = "/ai-mastery.html"
+  status = 200
+
+[[redirects]]
+  from = "/crypto"
+  to = "/crypto-trading.html"
+  status = 200
+
+[[redirects]]
+  from = "/thestars"
+  to = "/the-stars.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/shop"
+  to = "/shop.html"
+  status = 200
+
+[[redirects]]
+  from = "/ailanding"
+  to = "/ai-landing.html"
+  status = 200
+
+[[redirects]]
+  from = "/cryptolanding"
+  to = "/crypto-landing.html"
+  status = 200
+
+[[redirects]]
+  from = "/starslanding"
+  to = "/stars-landing.html"
+  status = 200 

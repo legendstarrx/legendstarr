@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Legendstarr - AI & Money Expert</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu-style.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        .contact-hero {
+            min-height: 40vh;
+            background: linear-gradient(120deg, #FFD700 0%, #FFB300 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .contact-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: #181c22;
+            padding: 3rem 2rem;
+        }
+        .contact-title {
+            font-size: 2.4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-section {
+            background: #181c22;
+            color: #FFD700;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: #FFD700;
+        }
+        .contact-form {
+            max-width: 480px;
+            margin: 0 auto 2rem auto;
+            background: #101318;
+            border-radius: 10px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 2px 18px rgba(255,215,0,0.10);
+        }
+        .contact-form label {
+            display: block;
+            text-align: left;
+            color: #FFD700;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            margin-bottom: 1.2rem;
+            border: 2px solid #FFD700;
+            border-radius: 6px;
+            background: #181c22;
+            color: #FFD700;
+            font-size: 1.08rem;
+            font-family: 'League Spartan', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .contact-form button {
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            color: #181c22;
+            font-weight: 900;
+            border-radius: 6px;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 12px rgba(255,215,0,0.18);
+            font-family: 'League Spartan', Arial, sans-serif;
+            cursor: pointer;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .contact-form button:hover {
+            box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.45);
+            transform: scale(1.04);
+        }
+        .contact-info {
+            color: #fff;
+            font-size: 1.08rem;
+            margin-top: 2rem;
+        }
+        .contact-info a {
+            color: #FFD700;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="body" style="min-height:100vh;">
+    <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column;">
+        <!-- Header -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
+                    LEGEND
+                    <img src="images/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                </a>
+            </div>
+            <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="navbar-right">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-header">
+                <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
+                    <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                    LEGEND
+                </span>
+                <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
+            </div>
+            <ul class="mobile-menu-list">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="mobile-menu-actions">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </div>
+        <main style="flex:1;">
+            <section class="contact-hero">
+                <div class="contact-hero-content animate-on-scroll visible">
+                    <div class="contact-title">CONTACT US</div>
+                    <div style="font-size:1.15rem;max-width:600px;margin:0 auto;color:#181c22;">Have a question, partnership inquiry, or need support? Reach out to the Legendstarr team below.</div>
+                </div>
+            </section>
+            <section class="contact-section">
+                <h2>Contact Us on WhatsApp</h2>
+                <div style="max-width:480px;margin:0 auto 2rem auto;background:#101318;border-radius:10px;padding:2rem 1.5rem;box-shadow:0 2px 18px rgba(255,215,0,0.10);color:#FFD700;">
+                    <p style="font-size:1.15rem;color:#fff;margin-bottom:1.5rem;">For fast support, questions, or partnership inquiries, message us directly on WhatsApp:</p>
+                    <a href="https://wa.me/2348100000000" target="_blank" style="display:inline-block;background:linear-gradient(90deg,#25D366 0%,#128C7E 100%);color:#fff;font-weight:900;border-radius:6px;padding:1rem 2.5rem;font-size:1.1rem;border:none;text-transform:uppercase;letter-spacing:1px;box-shadow:0 2px 12px rgba(37,211,102,0.18);font-family:'League Spartan',Arial,sans-serif;text-decoration:none;transition:box-shadow 0.3s,transform 0.3s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height:24px;vertical-align:middle;margin-right:0.7em;">Chat on WhatsApp
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <div>Email: <a href="mailto:support@legendstarr.com">support@legendstarr.com</a></div>
+                    <div>Instagram: <a href="https://instagram.com/legendstarrhq" target="_blank">@legendstarrhq</a></div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer-section animate-on-scroll section-separator" style="background:#181c22;">
+            <div class="footer-container">
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Programs</div>
+                        <a href="/aimastery" class="footer-link">AI Mastery</a>
+                        <a href="/crypto" class="footer-link">Crypto Trading</a>
+                        <a href="/thestars" class="footer-link">The Stars</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Info</div>
+                        <a href="/about" class="footer-link">About</a>
+                        <a href="/privacy" class="footer-link">Privacy Policy</a>
+                        <a href="/contact" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 

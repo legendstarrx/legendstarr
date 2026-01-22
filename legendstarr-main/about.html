@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Legendstarr - AI & Money Expert</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu-style.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        .about-hero {
+            min-height: 60vh;
+            background: linear-gradient(120deg, #FFD700 0%, #FFB300 100%), url('https://images.unsplash.com/photo-1465101178521-c1a9136a3fdc?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .about-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, rgba(255,215,0,0.18) 0%, rgba(10,13,18,0.82) 100%);
+            z-index: 2;
+        }
+        .about-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            padding: 3rem 2rem;
+        }
+        .about-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .about-desc {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 2.2rem;
+            opacity: 0.98;
+            line-height: 1.5;
+        }
+        .about-section {
+            background: #181c22;
+            color: #FFD700;
+            padding: 3rem 0 2rem 0;
+            text-align: center;
+        }
+        .about-section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            color: #FFD700;
+        }
+        .about-section p {
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+            font-size: 1.15rem;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="body" style="min-height:100vh;">
+    <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column;">
+        <!-- Header -->
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
+                    LEGEND
+                    <img src="images/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                </a>
+            </div>
+            <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="navbar-right">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-header">
+                <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
+                    <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                    LEGEND
+                </span>
+                <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
+            </div>
+            <ul class="mobile-menu-list">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="mobile-menu-actions">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </div>
+        <main style="flex:1;">
+            <section class="about-hero">
+                <div class="about-hero-overlay"></div>
+                <div class="about-hero-content animate-on-scroll visible">
+                    <div class="about-title">ABOUT LEGENDSTARR</div>
+                    <div class="about-desc">Legendstarr is a movement for those who refuse to settle. We empower ambitious individuals to master AI, crypto, and networking—giving you the tools, knowledge, and community to win in the modern world.</div>
+                </div>
+            </section>
+            <section class="about-section">
+                <h2>Our Mission</h2>
+                <p>To create a new generation of champions—people who take control of their destiny, build real skills, and achieve financial and personal freedom. We believe in action, not excuses.</p>
+                <h2>Our Vision</h2>
+                <p>To be the world's most powerful network for self-made success, where anyone can learn, grow, and connect with like-minded winners.</p>
+                <h2>Why Legendstarr?</h2>
+                <p>We combine proven programs, expert mentorship, and a global community. Whether you want to master AI, profit from crypto, or join a brotherhood of achievers, Legendstarr is your competitive advantage.</p>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer-section animate-on-scroll section-separator" style="background:#181c22;">
+            <div class="footer-container">
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <div class="footer-col-title">Programs</div>
+                        <a href="/aimastery" class="footer-link">AI Mastery</a>
+                        <a href="/crypto" class="footer-link">Crypto Trading</a>
+                        <a href="/thestars" class="footer-link">The Stars</a>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-col-title">Info</div>
+                        <a href="/about" class="footer-link">About</a>
+                        <a href="/privacy" class="footer-link">Privacy Policy</a>
+                        <a href="/contact" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-header">
+            <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;display:flex;align-items:center;gap:0.5rem;">
+                <img src="/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                LEGEND
+            </span>
+            <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="/aimastery">AI</a></li>
+            <li><a href="/crypto">CRYPTO</a></li>
+            <li><a href="/thestars">THE STARS</a></li>
+        </ul>
+        <div class="mobile-menu-actions">
+            <a href="/shop" class="nav-btn outline gold">SHOP</a>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 

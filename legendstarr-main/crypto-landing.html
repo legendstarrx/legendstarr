@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Trading | Legendstarr - AI & Money Expert</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu-style.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <!-- 100% privacy-first analytics -->
+    <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <style>
+        body { background: #101318; }
+        /* Custom Brevo form overrides */
+        .sib-form input[type="text"], .sib-form input[type="email"] {
+            background: #181c22 !important;
+            color: #FFD700 !important;
+            border: 2px solid #FFD700 !important;
+            border-radius: 6px !important;
+            padding: 1rem 1.2rem !important;
+            font-size: 1.1rem !important;
+            font-family: 'League Spartan', Arial, sans-serif !important;
+            box-shadow: none !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .sib-form button,
+        .sib-form-block__button {
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%) !important;
+            color: #181c22 !important;
+            font-weight: 900 !important;
+            border-radius: 6px !important;
+            padding: 1rem 2.5rem !important;
+            font-size: 1.1rem !important;
+            border: none !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            box-shadow: 0 2px 12px rgba(255,215,0,0.18) !important;
+            font-family: 'League Spartan', Arial, sans-serif !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            margin-top: 1rem !important;
+        }
+        .sib-form input::placeholder {
+            color: #FFD700 !important;
+            opacity: 0.8 !important;
+        }
+        .sib-form .sib-form-block__button svg {
+            display: none !important;
+        }
+        .sib-form .sib-form-message-panel {
+            border-radius: 6px !important;
+            font-family: 'League Spartan', Arial, sans-serif !important;
+        }
+        .sib-form .sib-form-message-panel__inner-text {
+            color: #FFD700 !important;
+        }
+        .sib-form .sib-powered-by {
+            display: none !important;
+        }
+        .sib-form,
+        .sib-form-container,
+        #sib-container {
+            background: #181c22 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        #sib-container {
+            padding: 0 !important;
+        }
+        .sib-form .sib-form-block {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .sib-form {
+            padding: 0 !important;
+        }
+        .product-hero {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #FFD700 0%, #FFB300 100%), url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1500&q=80') center center/cover no-repeat;
+            overflow: hidden;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            box-sizing: border-box;
+        }
+        .product-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(120deg, rgba(255,215,0,0.18) 0%, rgba(10,13,18,0.82) 100%);
+            z-index: 2;
+        }
+        .product-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeInUp 1.2s cubic-bezier(.4,0,.2,1);
+        }
+        .product-title {
+            font-size: 3.2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .product-desc {
+            font-size: 1.35rem;
+            font-weight: 500;
+            margin-bottom: 2.2rem;
+            opacity: 0.98;
+            line-height: 1.5;
+            animation: fadeIn 1.8s cubic-bezier(.4,0,.2,1);
+        }
+        .product-benefits {
+            font-size: 1.15rem;
+            color: #FFD700;
+            margin-bottom: 2.2rem;
+            font-weight: 700;
+            animation: fadeIn 2.2s cubic-bezier(.4,0,.2,1);
+        }
+        .product-cta {
+            background: linear-gradient(90deg, #FFD700 0%, #FFB300 100%);
+            color: #181c22;
+            padding: 1.2rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 900;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.25);
+            margin-top: 0.5rem;
+            transition: box-shadow 0.3s, transform 0.3s;
+            animation: pulse 2.5s infinite;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .product-cta:hover {
+            box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.45);
+            transform: scale(1.04);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 24px 0 rgba(255, 215, 0, 0.25); }
+            50% { box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.45); }
+        }
+        .ai-proof-slider {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto 2.5rem auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 18px rgba(255,215,0,0.10);
+        }
+        .ai-proof-slider .swiper-slide img {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            object-fit: cover;
+            min-height: 260px;
+            max-height: 340px;
+        }
+        .ai-proof-slider .swiper-pagination-bullet {
+            background: #FFD700;
+            opacity: 1;
+        }
+        .ai-proof-slider .swiper-pagination-bullet-active {
+            background: #FFB300;
+        }
+        /* Add horizontal padding to main content sections */
+        .section,
+        .newsletter-section {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            box-sizing: border-box;
+        }
+        @media (max-width: 767px) {
+            .section,
+            .newsletter-section {
+                padding-left: 4vw !important;
+                padding-right: 4vw !important;
+            }
+            .product-hero {
+                padding-left: 4vw !important;
+                padding-right: 4vw !important;
+            }
+        }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .navbar-left img {
+            height: 32px;
+            width: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1423812642089568');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1423812642089568&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+     <!-- Meta Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '993379702506532');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=993379702506532&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body class="body" style="min-height:100vh;">
+    <div class="page-wrap" style="min-height:100vh;display:flex;flex-direction:column;">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <a href="/" class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;text-decoration:none;display:flex;align-items:center;gap:0.5rem;">
+                    LEGEND
+                    <img src="images/logo.png" alt="Legendstarr Logo" style="height:32px;width:auto;">
+                </a>
+            </div>
+            <div class="navbar-mobile-toggle" id="navbar-mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="navbar-right">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu-header">
+                <div style="display:flex;align-items:center;gap:0.5rem;">
+                    <span class="logo" style="font-size:1.25rem;font-weight:900;letter-spacing:1.5px;color:#FFD700;font-family:'League Spartan',Arial,sans-serif;">LEGEND</span>
+                    <img src="images/logo.png" alt="Legendstarr Logo" style="height:24px;width:auto;">
+                </div>
+                <span class="mobile-menu-close" id="mobile-menu-close">&times;</span>
+            </div>
+            <ul class="mobile-menu-list">
+                <li><a href="/aimastery">AI</a></li>
+                <li><a href="/crypto">CRYPTO</a></li>
+                <li><a href="/thestars">THE STARS</a></li>
+            </ul>
+            <div class="mobile-menu-actions">
+                <a href="/shop" class="nav-btn outline gold">SHOP</a>
+            </div>
+        </div>
+        <main style="flex:1;">
+            <!-- Hero Section -->
+            <section class="product-hero">
+                <div class="product-hero-overlay"></div>
+                <div class="product-hero-content animate-on-scroll visible">
+                    <div class="product-title">CRYPTO TRADING</div>
+                    <div class="product-desc">Profit from crypto—no guesswork, no hype. Get real-time trading insights, winning strategies, and direct access to a millionaire mentor and private group. Stay ahead of the market and multiply your income, month after month.</div>
+                    <div class="product-benefits" style="color:#FFD700;font-weight:700;">100% FREE • No Payment Required • Limited Spots</div>
+                    <a href="https://chat.whatsapp.com/CH3f85EsCAP56kPYJ9k8G1" class="product-cta" target="_blank">JOIN THE WHATSAPP GROUP FREE</a>
+                </div>
+            </section>
+            <!-- What You Get Section -->
+            <section class="section animate-on-scroll" style="background:#101318;padding:4rem 0 2.5rem 0;">
+                <div class="section-title" style="font-size:2.2rem;margin-bottom:2rem;">What You Get</div>
+                <ul style="max-width:600px;margin:0 auto;list-style:none;padding:0;">
+                    <li style="display:flex;align-items:center;gap:1rem;font-size:1.25rem;margin-bottom:1.3rem;animation:fadeInUp 1.2s;"><span style="color:#FFD700;font-size:2rem;">✔</span> Daily crypto signals and trade alerts from real millionaires</li>
+                    <li style="display:flex;align-items:center;gap:1rem;font-size:1.25rem;margin-bottom:1.3rem;animation:fadeInUp 1.4s;"><span style="color:#FFD700;font-size:2rem;">✔</span> Proven strategies to multiply your income in any market</li>
+                    <li style="display:flex;align-items:center;gap:1rem;font-size:1.25rem;margin-bottom:1.3rem;animation:fadeInUp 1.6s;"><span style="color:#FFD700;font-size:2rem;">✔</span> Private mastermind group for support and networking</li>
+                    <li style="display:flex;align-items:center;gap:1rem;font-size:1.25rem;margin-bottom:1.3rem;animation:fadeInUp 1.8s;"><span style="color:#FFD700;font-size:2rem;">✔</span> Live Q&A and coaching sessions every week</li>
+                </ul>
+                <!-- Extra CTA after What You Get -->
+                <div style="text-align:center;margin:2.5rem 0 0 0;">
+                    <a href="https://chat.whatsapp.com/CH3f85EsCAP56kPYJ9k8G1" class="product-cta" style="font-size:1.15rem;padding:1.1rem 2.5rem;" target="_blank">JOIN THE WHATSAPP GROUP FREE</a>
+                </div>
+            </section>
+            <!-- Transformation Section -->
+            <section class="section animate-on-scroll" style="background:#181c22;padding:4rem 0 2.5rem 0;">
+                <div class="section-title" style="font-size:2.1rem;margin-bottom:1.5rem;">How This Will Change Your Life</div>
+                <div style="max-width:700px;margin:0 auto;font-size:1.25rem;line-height:1.7;color:#fff;background:rgba(10,13,18,0.82);border-radius:12px;padding:2.2rem 2rem;box-shadow:0 2px 18px rgba(0,0,0,0.18);animation:fadeInUp 1.5s;">
+                    Imagine making more in a day than most people make in a month. With the right guidance, you can turn your phone into a money machine—trading from anywhere in the world. <span style="color:#FFD700;font-weight:700;">No more guessing. No more missing out. Just real results.</span>
+                </div>
+            </section>
+            <!-- Proof & Social Proof Section -->
+            <section class="section animate-on-scroll" style="background:#101318;padding:4rem 0 2.5rem 0;">
+                <div class="section-title" style="font-size:2.1rem;margin-bottom:1.5rem;">Proof & Success Stories</div>
+                <div style="max-width:700px;margin:0 auto 2.5rem auto;font-size:1.18rem;line-height:1.6;color:#FFD700;text-align:center;animation:fadeInUp 1.7s;">
+                    "I made $10,000 in a single day after joining the mastermind. The signals and strategies are the real deal." <span style="color:#fff;font-weight:700;">You could be next.</span>
+                </div>
+                <div class="ai-proof-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="/images/crypto1.png" alt="Bullish Crypto Chart"></div>
+                        <div class="swiper-slide"><img src="/images/crypto2.png" alt="Crypto Signals Screenshot"></div>
+                        <div class="swiper-slide"><img src="/images/crypto3.png" alt="Profit Notification"></div>
+                        <div class="swiper-slide"><img src="/images/crypto4.png" alt="Trading Group Chat"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;animation:fadeInUp 1.9s;">
+                    <div style="background:#181c22;border-radius:12px;padding:1.5rem 1.2rem;max-width:320px;min-width:220px;box-shadow:0 2px 12px rgba(255,215,0,0.08);">
+                        <div style="font-size:1.1rem;color:#FFD700;font-weight:700;margin-bottom:0.7rem;">"Doubled my account in 2 weeks. The private group is worth every penny."</div>
+                        <div style="color:#bfc2c7;font-size:0.98rem;">— Jamal, Nigeria</div>
+                    </div>
+                    <div style="background:#181c22;border-radius:12px;padding:1.5rem 1.2rem;max-width:320px;min-width:220px;box-shadow:0 2px 12px rgba(255,215,0,0.08);">
+                        <div style="font-size:1.1rem;color:#FFD700;font-weight:700;margin-bottom:0.7rem;">"I made $10k in a day following the signals. This is the real deal."</div>
+                        <div style="color:#bfc2c7;font-size:0.98rem;">— Fatima, UAE</div>
+                    </div>
+                    <div style="background:#181c22;border-radius:12px;padding:1.5rem 1.2rem;max-width:320px;min-width:220px;box-shadow:0 2px 12px rgba(255,215,0,0.08);">
+                        <div style="font-size:1.1rem;color:#FFD700;font-weight:700;margin-bottom:0.7rem;">"The live coaching and support is next level. I finally feel in control of my money."</div>
+                        <div style="color:#bfc2c7;font-size:0.98rem;">— Yusuf, Turkey</div>
+                    </div>
+                </div>
+                <!-- Extra CTA after testimonials -->
+                <div style="text-align:center;margin:2.5rem 0 0 0;">
+                    <a href="https://chat.whatsapp.com/CH3f85EsCAP56kPYJ9k8G1" class="product-cta" style="font-size:1.15rem;padding:1.1rem 2.5rem;" target="_blank">START WINNING TODAY (FREE)</a>
+                </div>
+            </section>
+            <!-- Final Persuasive Section Before Newsletter -->
+            <section class="section animate-on-scroll" style="background:#181c22;padding:3.5rem 0 2.5rem 0;">
+                <div style="max-width:600px;margin:0 auto;text-align:center;">
+                    <div style="font-size:2rem;font-weight:900;color:#FFD700;margin-bottom:1.2rem;">You can choose to join now and change your life…</div>
+                    <div style="font-size:2.3rem;font-weight:900;color:#FFD700;margin-bottom:0.7rem;">100% FREE <span style="font-size:1.1rem;color:#fff;font-weight:600;">No Payment Required</span></div>
+                    <ul style="list-style:none;padding:0;margin:1.2rem 0 2rem 0;font-size:1.18rem;color:#FFD700;font-weight:700;">
+                        <li style="margin-bottom:0.7rem;">✔ Daily winning crypto signals</li>
+                        <li style="margin-bottom:0.7rem;">✔ Private millionaire mastermind</li>
+                        <li>✔ Real results, real support</li>
+                    </ul>
+                    <a href="https://chat.whatsapp.com/CH3f85EsCAP56kPYJ9k8G1" class="product-cta" style="font-size:1.18rem;padding:1.2rem 3rem;margin-bottom:1.2rem;" target="_blank">JOIN THE WHATSAPP GROUP FREE</a>
+                    <div style="color:#bfc2c7;font-style:italic;margin-top:2.2rem;font-size:1.08rem;">Or go watch Netflix and be the same person forever. The choice is yours.</div>
+                </div>
+            </section>
+            <!-- Newsletter Section -->
+            <section class="newsletter-section animate-on-scroll section-separator">
+                <div class="newsletter-header">
+                    <div class="newsletter-subtitle">WEEKLY CONTENT</div>
+                    <div class="newsletter-title">LEGENDSTARR <span class="bold">NEWSLETTER</span></div>
+                    <div class="newsletter-desc">YOUR COMPETITIVE ADVANTAGE</div>
+                </div>
+                <div class="sib-form" style="text-align: center; background-color: #181c22; max-width:540px; margin:0 auto;">
+                  <div id="sib-form-container" class="sib-form-container">
+                    <div id="error-message" class="sib-form-message-panel" style="display:none;font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                          <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                                      Your subscription could not be saved. Please try again.
+                                  </span>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div id="success-message" class="sib-form-message-panel" style="display:none;font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                        <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                          <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248C504 119.083 392.957 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                        </svg>
+                        <span class="sib-form-message-panel__inner-text">
+                                      Your subscription has been successful.
+                                  </span>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(0,0,0,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
+                      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIFAFq2jPq3NU7LM6AJNPghXeEPhg0Kz45pgvy3MVRBbp5gC7hC_54Sy1w6y22fykKdmNC9_fh-GmRWih0iwVoErV4DeatTfh-W71pkpFLF7cIVyXQALm8PO9D1w6mVigKUEKlKVry46HZMLZiqEf_0CFMzU-nGrToqNcAA94Y1jpsxsxbZ14QMrIKf_XegB2-qFE7umXIblt7k" data-type="subscription">
+                        <div style="padding: 8px 0;">
+                          <div class="sib-input sib-form-block">
+                            <div class="form__entry entry_block">
+                              <div class="form__label-row ">
+                                <div class="entry__field">
+                                  <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                                </div>
+                              </div>
+                              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div style="padding: 8px 0;">
+                          <div class="sib-form-block" style="text-align: center">
+                            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:23px; text-align:center; font-weight:700; font-family:'Palatino Linotype', serif; color:#080000; background-color:#f0cc03; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+                              <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                                <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                              </svg>
+                              SUBSCRIBE
+                            </button>
+                          </div>
+                        </div>
+                        <input type="hidden" name="locale" value="en">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+            </section>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if (document.querySelector('.ai-proof-slider')) {
+            new Swiper('.ai-proof-slider', {
+              slidesPerView: 1,
+              spaceBetween: 24,
+              loop: true,
+              centeredSlides: true,
+              pagination: {
+                el: '.ai-proof-slider .swiper-pagination',
+                clickable: true,
+              },
+              autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+              },
+              effect: 'fade',
+              fadeEffect: {
+                crossFade: true
+              },
+              speed: 500
+            });
+          }
+        });
+        </script>
+        <script src="js/main.js"></script>
+        <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
+    </div>
+</body>
+</html> 
