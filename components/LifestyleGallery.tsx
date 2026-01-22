@@ -154,9 +154,9 @@ export default function LifestyleGallery() {
                 transition={{ duration: 0.6 }}
                 className="bg-black/50 border border-gold/20 rounded-lg overflow-hidden hover:border-gold/40 transition-all group"
               >
-                <div className="grid md:grid-cols-2 gap-0">
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-0">
                   {/* Image Side */}
-                  <div className="relative aspect-video md:aspect-auto md:h-full min-h-[300px]">
+                  <div className="relative aspect-video md:aspect-auto md:h-full min-h-[250px] sm:min-h-[300px] order-1">
                     <div className="relative w-full h-full">
                       <Image
                         src="/images/results/adx results/Screenshot 2026-01-22 144816.png"
@@ -178,7 +178,7 @@ export default function LifestyleGallery() {
                   </div>
 
                   {/* Content Side */}
-                  <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-center min-h-0 overflow-visible order-2">
                     {/* Mobile Badge - Show on mobile only */}
                     <div className="md:hidden mb-4">
                       <div className="relative inline-block">
@@ -188,28 +188,28 @@ export default function LifestyleGallery() {
                         </div>
                       </div>
                     </div>
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:text-gold transition-colors">
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 md:mb-4 group-hover:text-gold transition-colors">
                       Work With Me
                     </h3>
-                    <p className="text-gold text-lg md:text-xl mb-4 font-medium">Partnership Program</p>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
+                    <p className="text-gold text-base md:text-lg lg:text-xl mb-3 md:mb-4 font-medium">Partnership Program</p>
+                    <p className="text-gray-300 text-sm sm:text-base mb-4 md:mb-6 leading-relaxed break-words">
                       I'll handle your advertising campaigns using proven systems. Whether you run an AdSense website, 
                       e-commerce store, or any business—let's scale together. No upfront costs, profit share model.
                     </p>
                     
                     {/* Key Benefits */}
-                    <ul className="space-y-3 mb-8">
+                    <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                       {[
                         'No upfront costs—I only get paid when you make money',
                         'Proven advertising systems that actually work',
                         '40% profit share (negotiable based on scale)',
                         'Focus on growth while I handle your ads'
                       ].map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
-                          <svg className="w-5 h-5 text-gold mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <li key={idx} className="flex items-start text-gray-300 text-sm sm:text-base break-words">
+                          <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gold mr-2 sm:mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                           </svg>
-                          {benefit}
+                          <span className="flex-1">{benefit}</span>
                         </li>
                       ))}
                     </ul>
