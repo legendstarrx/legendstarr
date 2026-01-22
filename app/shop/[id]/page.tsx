@@ -1,20 +1,21 @@
 'use client'
 
-import { notFound } from 'next/navigation'
+import { notFound, useParams } from 'next/navigation'
 import Image from 'next/image'
 import { getProductById } from '@/lib/products'
 import Button from '@/components/Button'
 import AnimatedSection from '@/components/AnimatedSection'
 import { motion } from 'framer-motion'
 
-interface ProductPageProps {
-  params: {
-    id: string
+export default function ProductPage() {
+  const params = useParams()
+  const productId = params?.id as string | undefined
+  
+  if (!productId) {
+    notFound()
   }
-}
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductById(params.id)
+  const product = getProductById(productId)
 
   if (!product) {
     notFound()
