@@ -7,9 +7,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-gold mb-4">Legendstarr</h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm mb-4">
               Build Skills. Build Income. Build Legacy.
             </p>
+            <div className="space-y-2 text-sm">
+              <p className="text-gray-400">
+                <span className="text-gold font-semibold">Address:</span> 1013 Gama B
+              </p>
+              <p className="text-gray-400">
+                <span className="text-gold font-semibold">Business Phone:</span>{' '}
+                <a href="tel:+2349162923389" className="hover:text-gold transition-colors">
+                  +234 916 292 3389
+                </a>
+              </p>
+            </div>
           </div>
           
           <div>
