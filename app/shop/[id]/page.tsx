@@ -276,15 +276,15 @@ export default function ProductPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  quote: "This completely changed how I run ads. The systems are clear, actionable, and actually work.",
+                  quote: "Anybody who had doubt, you na mumu. I hit 233 ACP a day. When I say Taupi, be forever grateful to you. I'm not joking.",
                   author: "Course Student"
                 },
                 {
-                  quote: "My cost per click dropped massively after implementing these strategies. Worth every dollar.",
+                  quote: "I'm now even afraid of the earnings, like it's too much. Imagine I have only spent 18k naira for this.",
                   author: "Course Student"
                 },
                 {
-                  quote: "I finally understand ads instead of guessing. The psychology frameworks are game-changing.",
+                  quote: "My 2025 won't be complete if I don't recognize the role you played in my life. Heaven bless the day I met you, brother. Thank you for being humble, honest, and hardworking.",
                   author: "Course Student"
                 }
               ].map((testimonial, index) => (

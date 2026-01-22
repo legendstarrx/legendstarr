@@ -167,10 +167,10 @@ export default function LifestyleGallery() {
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute top-4 right-4 z-10">
+                    <div className="absolute top-3 right-3 md:top-4 md:right-4 z-10">
                       <div className="relative">
                         <div className="absolute inset-0 bg-gold/30 blur-md rounded-full"></div>
-                        <div className="relative bg-gradient-to-br from-gold via-gold-400 to-gold-500 text-black px-5 py-2.5 rounded-full text-lg font-bold shadow-lg shadow-gold/50 border-2 border-gold-300">
+                        <div className="relative bg-gradient-to-br from-gold via-gold-400 to-gold-500 text-black px-3 py-1.5 md:px-5 md:py-2.5 rounded-full text-sm md:text-lg font-bold shadow-lg shadow-gold/50 border-2 border-gold-300 whitespace-nowrap">
                           40% Profit Share
                         </div>
                       </div>
@@ -178,11 +178,20 @@ export default function LifestyleGallery() {
                   </div>
 
                   {/* Content Side */}
-                  <div className="p-8 md:p-12 flex flex-col justify-center">
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-gold transition-colors">
+                  <div className="p-6 md:p-8 lg:p-12 flex flex-col justify-center">
+                    {/* Mobile Badge - Show on mobile only */}
+                    <div className="md:hidden mb-4">
+                      <div className="relative inline-block">
+                        <div className="absolute inset-0 bg-gold/30 blur-md rounded-full"></div>
+                        <div className="relative bg-gradient-to-br from-gold via-gold-400 to-gold-500 text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-gold/50 border-2 border-gold-300 whitespace-nowrap">
+                          40% Profit Share
+                        </div>
+                      </div>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:text-gold transition-colors">
                       Work With Me
                     </h3>
-                    <p className="text-gold text-xl mb-4 font-medium">Partnership Program</p>
+                    <p className="text-gold text-lg md:text-xl mb-4 font-medium">Partnership Program</p>
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       I'll handle your advertising campaigns using proven systems. Whether you run an AdSense website, 
                       e-commerce store, or any business—let's scale together. No upfront costs, profit share model.
