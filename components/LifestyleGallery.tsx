@@ -221,7 +221,7 @@ export default function LifestyleGallery() {
                         </Button>
                       </Link>
                       <Button 
-                        href="https://wa.me/2349162923389" 
+                        href="https://wa.me/2349064538679" 
                         variant="secondary"
                         external
                         className="flex-1 text-lg py-4"

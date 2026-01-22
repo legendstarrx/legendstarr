@@ -226,7 +226,7 @@ export default function WorkWithMe() {
               whileTap={{ scale: 0.95 }}
             >
               <Button 
-                href="https://wa.me/2349162923389" 
+                href="https://wa.me/2349064538679" 
                 variant="primary"
                 external
                 className="text-xl px-12 py-6"
