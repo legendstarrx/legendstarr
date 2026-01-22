@@ -276,7 +276,7 @@ export default function ProductPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  quote: "Anybody who had doubt, you na mumu. I hit 233 ACP a day. When I say Taupi, be forever grateful to you. I'm not joking.",
+                  quote: "Anybody who had doubt, you na mumu. I hit 233 eCPM yesterday. When I say I will be forever grateful to you. I'm not joking.",
                   author: "Course Student"
                 },
                 {
