@@ -9,7 +9,11 @@ export interface Product {
   features: string[]
   paymentLink: string
   highlights: string[]
+  hidden?: boolean // Set to true to hide product without deleting
 }
+
+// Global flag to hide all products and show "Coming Soon"
+export const PRODUCTS_COMING_SOON = true
 
 export const products: Product[] = [
   {
