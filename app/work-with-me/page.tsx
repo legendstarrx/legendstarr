@@ -46,8 +46,8 @@ export default function WorkWithMe() {
               </p>
 
               <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                I'll handle your advertising campaigns using the same systems I teach and use for 
-                my own businesses. You get results-driven advertising without the learning curve.
+                I'll handle your advertising campaigns using the same proven systems I use for 
+                my own businesses. You get results-driven advertising without the hassle.
               </p>
 
               <div className="mt-8 p-6 bg-gradient-to-r from-gold/10 via-gold/5 to-transparent border-l-4 border-gold rounded-lg">

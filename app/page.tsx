@@ -68,7 +68,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Scale Your{' '}
+              Multi-Millionaire.{' '}
               <motion.span 
                 className="text-gold inline-block"
                 animate={{ 
@@ -80,9 +80,9 @@ export default function Home() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                Business.
+                Entrepreneur.
               </motion.span>{' '}
-              Maximize Results.
+              Builder.
             </motion.h1>
           </motion.div>
           
@@ -92,7 +92,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Proven advertising systems that drive real revenue.
+            Building businesses. Creating wealth. Delivering results.
           </motion.p>
           
           <motion.div
@@ -103,7 +103,7 @@ export default function Home() {
             whileTap={{ scale: 0.95 }}
           >
             <Button href="/work-with-me" variant="primary" className="text-lg px-10 py-5">
-              Let's Work Together
+              Work With Me
             </Button>
           </motion.div>
         </div>
@@ -135,9 +135,9 @@ export default function Home() {
               Why <span className="text-gold">Legendstarr</span>?
             </h2>
             <p className="text-center text-gray-400 text-lg mb-12 max-w-3xl mx-auto">
-              I'm not just an ad specialist—I'm an entrepreneur who's built multiple revenue streams. 
-              The advertising systems I teach are the same ones I use to scale my own businesses. 
-              This is about building wealth, not just running ads.
+              I'm a multi-millionaire entrepreneur who's built and scaled multiple businesses across industries. 
+              When you work with me, you get access to the same proven systems I use to generate revenue. 
+              This is about building real wealth together.
             </p>
           </AnimatedSection>
 
@@ -160,10 +160,10 @@ export default function Home() {
                     </svg>
                   </motion.div>
                   <h3 className="text-2xl font-semibold mb-4 text-gold group-hover:text-gold-300 transition-colors">
-                    Entrepreneur-First Approach
+                    Proven Track Record
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
-                    Built by an entrepreneur, for entrepreneurs. These aren't just ad strategies—they're business growth systems.
+                    I've built and scaled multiple profitable businesses. When you partner with me, you leverage systems that actually work.
                   </p>
                 </div>
               </motion.div>
@@ -190,7 +190,7 @@ export default function Home() {
                     Multiple Revenue Streams
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
-                    Learn from someone who's scaled businesses across industries—not just ads, but software, courses, and more.
+                    I've scaled businesses across industries—advertising, software, e-commerce, and more. Diverse experience, real results.
                   </p>
                 </div>
               </motion.div>
@@ -214,10 +214,10 @@ export default function Home() {
                     </svg>
                   </motion.div>
                   <h3 className="text-2xl font-semibold mb-4 text-gold group-hover:text-gold-300 transition-colors">
-                    Wealth Building Mindset
+                    Partnership, Not Just Service
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
-                    It's not about one skill—it's about building systems that create lasting wealth and freedom.
+                    When we work together, our success is aligned. I only win when you win—that's the foundation of real partnership.
                   </p>
                 </div>
               </motion.div>
