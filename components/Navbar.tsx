@@ -40,6 +40,10 @@ export default function Navbar() {
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
             </Link>
+            <Link href="/about" className="text-white hover:text-gold transition-colors relative group">
+              About
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
+            </Link>
             <Link href="/shop" className="text-white hover:text-gold transition-colors relative group">
               Shop
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold group-hover:w-full transition-all duration-300"></span>
@@ -92,6 +96,15 @@ export default function Navbar() {
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.15 }}
+              >
+                <Link href="/about" className="block text-white hover:text-gold transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
+                  About
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
                 <Link href="/shop" className="block text-white hover:text-gold transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
@@ -101,7 +114,7 @@ export default function Navbar() {
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.25 }}
               >
                 <Link href="/work-with-me" className="block text-white hover:text-gold transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                   Work With Me
@@ -110,7 +123,7 @@ export default function Navbar() {
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.3 }}
               >
                 <Link href="/contact" className="block text-white hover:text-gold transition-colors py-2" onClick={() => setIsMenuOpen(false)}>
                   Contact
