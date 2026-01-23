@@ -34,7 +34,7 @@ export default function Contact() {
                   <h3 className="text-xl font-semibold text-white mb-2">WhatsApp</h3>
                   <p className="text-gray-400 mb-4">+234 906 453 8679</p>
                   <Button 
-                    href="https://wa.me/2349064538679" 
+                    href="https://wa.me/2349064538679?text=Hi%20Legendstarr%2C%20I%20found%20you%20on%20your%20website%20and%20I%27d%20like%20to%20connect%20with%20you." 
                     variant="primary"
                     external
                     className="w-full sm:w-auto"

@@ -141,15 +141,15 @@ export default function WorkWithMe() {
               
               <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
                 <p>
-                  <strong className="text-gold">Standard Rate: 40% of profit</strong> from advertising campaigns I manage.
+                  <strong className="text-gold">Profit Share — Negotiable Based on Scale</strong>
                 </p>
                 
                 <p>
-                  The percentage is <strong className="text-gold">negotiable</strong> based on:
+                  The exact percentage is determined based on:
                 </p>
                 
                 <ul className="list-disc list-inside space-y-3 ml-4">
-                  <li>The scale of your business</li>
+                  <li>The scale and nature of your business</li>
                   <li>Your current revenue and growth potential</li>
                   <li>Team size and operational complexity</li>
                   <li>Long-term partnership potential</li>
@@ -226,7 +226,7 @@ export default function WorkWithMe() {
               whileTap={{ scale: 0.95 }}
             >
               <Button 
-                href="https://wa.me/2349064538679" 
+                href="https://wa.me/2349064538679?text=Hi%20Legendstarr%2C%20I%20found%20you%20on%20your%20website%20and%20I%27d%20like%20to%20work%20with%20you%20to%20scale%20my%20business." 
                 variant="primary"
                 external
                 className="text-xl px-12 py-6"

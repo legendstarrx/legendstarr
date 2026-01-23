@@ -68,7 +68,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Build Skills.{' '}
+              Scale Your{' '}
               <motion.span 
                 className="text-gold inline-block"
                 animate={{ 
@@ -80,9 +80,9 @@ export default function Home() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                Build Income.
+                Business.
               </motion.span>{' '}
-              Build Legacy.
+              Maximize Results.
             </motion.h1>
           </motion.div>
           
@@ -92,16 +92,18 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Real execution. Real systems. No recycled theory.
+            Proven advertising systems that drive real revenue.
           </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <Button href="/shop" variant="primary" className="text-lg px-10 py-5">
-              Enter the Program
+            <Button href="/work-with-me" variant="primary" className="text-lg px-10 py-5">
+              Let's Work Together
             </Button>
           </motion.div>
         </div>

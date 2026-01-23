@@ -97,7 +97,7 @@ export default function ProductPage() {
             </h2>
             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
               Skip the courses and let me handle your advertising while you focus on growth. 
-              No upfront costs—just a 40% profit share model.
+              No upfront costs—profit share negotiable based on scale.
             </p>
             <Link href="/work-with-me">
               <Button variant="primary" className="text-xl px-12 py-6">

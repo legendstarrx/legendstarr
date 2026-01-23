@@ -122,7 +122,7 @@ export default function Shop() {
                       </h3>
                       <p className="text-gold mb-4 font-medium">Profit Share Partnership</p>
                       <p className="text-gray-400 mb-6">
-                        Let me handle your advertising while you focus on growth. No upfront costs—40% profit share model.
+                        Let me handle your advertising while you focus on growth. No upfront costs—profit share negotiable based on scale.
                       </p>
                       
                       <Link href="/work-with-me">

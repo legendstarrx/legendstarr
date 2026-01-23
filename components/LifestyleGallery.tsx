@@ -171,7 +171,7 @@ export default function LifestyleGallery() {
                       <div className="relative">
                         <div className="absolute inset-0 bg-gold/30 blur-md rounded-full"></div>
                         <div className="relative bg-gradient-to-br from-gold via-gold-400 to-gold-500 text-black px-3 py-1.5 md:px-5 md:py-2.5 rounded-full text-sm md:text-lg font-bold shadow-lg shadow-gold/50 border-2 border-gold-300 whitespace-nowrap">
-                          40% Profit Share
+                          Profit Share
                         </div>
                       </div>
                     </div>
@@ -184,7 +184,7 @@ export default function LifestyleGallery() {
                       <div className="relative inline-block">
                         <div className="absolute inset-0 bg-gold/30 blur-md rounded-full"></div>
                         <div className="relative bg-gradient-to-br from-gold via-gold-400 to-gold-500 text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-gold/50 border-2 border-gold-300 whitespace-nowrap">
-                          40% Profit Share
+                          Profit Share
                         </div>
                       </div>
                     </div>
@@ -202,7 +202,7 @@ export default function LifestyleGallery() {
                       {[
                         'No upfront costs—I only get paid when you make money',
                         'Proven advertising systems that actually work',
-                        '40% profit share (negotiable based on scale)',
+                        'Profit share negotiable based on scale',
                         'Focus on growth while I handle your ads'
                       ].map((benefit, idx) => (
                         <li key={idx} className="flex items-start text-gray-300 text-sm sm:text-base break-words">
@@ -221,7 +221,7 @@ export default function LifestyleGallery() {
                         </Button>
                       </Link>
                       <Button 
-                        href="https://wa.me/2349064538679" 
+                        href="https://wa.me/2349064538679?text=Hi%20Legendstarr%2C%20I%20found%20you%20on%20your%20website%20and%20I%27d%20like%20to%20work%20with%20you%20to%20scale%20my%20business." 
                         variant="secondary"
                         external
                         className="flex-1 text-lg py-4"
