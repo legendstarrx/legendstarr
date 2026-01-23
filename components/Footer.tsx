@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-gold mb-4">Legendstarr</h3>
             <p className="text-gray-400 text-sm mb-4">
-              Build Skills. Build Income. Build Legacy.
+              Multi-Millionaire. Entrepreneur. Builder.
             </p>
             <div className="space-y-2 text-sm">
               <p className="text-gray-400">
@@ -45,9 +45,24 @@ export default function Footer() {
             <h4 className="text-gold font-semibold mb-4">Connect</h4>
             <ul className="space-y-2">
               <li>
+                <Link href="/about" className="text-gray-400 hover:text-gold transition-colors text-sm">
+                  About
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-gray-400 hover:text-gold transition-colors text-sm">
                   Contact Us
                 </Link>
+              </li>
+              <li>
+                <a href="https://instagram.com/legendstarrx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors text-sm">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/legendstarrx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors text-sm">
+                  Twitter / X
+                </a>
               </li>
             </ul>
           </div>
