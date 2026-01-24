@@ -55,12 +55,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="https://instagram.com/legendstarrx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors text-sm">
+                <a href="https://instagram.com/legend_starr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors text-sm">
                   Instagram
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/legendstarrx" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors text-sm">
+                <a href="https://twitter.com/legend_starr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold transition-colors text-sm">
                   Twitter / X
                 </a>
               </li>
