@@ -27,48 +27,33 @@ const lifestyleImages = [
   },
   {
     id: 4,
-    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.2d4.jpeg',
-    alt: 'Legendstarr'
-  },
-  {
-    id: 5,
-    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15j.23.jpeg',
-    alt: 'Legendstarr'
-  },
-  {
-    id: 6,
     src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.17.jpeg',
     alt: 'Legendstarr'
   },
   {
-    id: 7,
+    id: 5,
     src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.08.41.jpeg',
     alt: 'Legendstarr'
   },
   {
-    id: 8,
+    id: 6,
     src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.18.28 (1).jpeg',
     alt: 'Legendstarr'
   },
   {
-    id: 9,
-    src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.41.45.jpeg',
-    alt: 'Legendstarr'
-  },
-  {
-    id: 10,
+    id: 7,
     src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.41.59.jpeg',
     alt: 'Legendstarr'
   },
   {
-    id: 11,
+    id: 8,
     src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 19.56.27.jpeg',
     alt: 'Legendstarr'
   },
   {
-    id: 12,
-    src: '/images/results/lifestyle/Screenshot 2026-01-22 144816.png',
-    alt: 'Results'
+    id: 9,
+    src: '/images/results/my lifestyle resultd/WhatsApp Image 2026-01-22 at 14.15.24.jpeg',
+    alt: 'Legendstarr'
   },
 ]
 
@@ -164,8 +149,156 @@ export default function LifestyleGallery() {
           </div>
         </AnimatedSection>
 
-        {/* Work With Me Showcase */}
+        {/* Social Media Section */}
         <AnimatedSection delay={0.5}>
+          <div className="mt-20 pt-20 border-t border-gold/20">
+            <div className="text-center mb-12">
+              <motion.p 
+                className="text-gold text-sm font-semibold tracking-[0.3em] uppercase mb-4"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                Follow the Journey
+              </motion.p>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                Stay <span className="text-gold">Connected</span>
+              </h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                Behind the scenes, daily insights, and exclusive content.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {/* Instagram Card */}
+              <motion.a
+                href="https://instagram.com/legendstarrx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-gold/20 hover:border-gold/60 transition-all duration-500"
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Image
+                  src="/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.41.59.jpeg"
+                  alt="Follow on Instagram"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent group-hover:from-black/90 transition-all duration-500" />
+                
+                {/* Instagram Logo */}
+                <div className="absolute top-6 left-6">
+                  <motion.div 
+                    className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center shadow-lg"
+                    whileHover={{ rotate: 10 }}
+                  >
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <p className="text-gray-400 text-sm mb-2 group-hover:text-gray-300 transition-colors">Daily updates & behind the scenes</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-gold transition-colors">
+                    Instagram
+                  </h3>
+                </div>
+
+                {/* Hover Arrow */}
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-10 h-10 rounded-full bg-gold/20 backdrop-blur-sm flex items-center justify-center">
+                    <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.a>
+
+              {/* Twitter/X Card */}
+              <motion.a
+                href="https://twitter.com/legendstarrx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-gold/20 hover:border-gold/60 transition-all duration-500"
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Image
+                  src="/images/results/lifestyle/WhatsApp Image 2026-01-24 at 19.56.27.jpeg"
+                  alt="Follow on Twitter"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent group-hover:from-black/90 transition-all duration-500" />
+                
+                {/* X Logo */}
+                <div className="absolute top-6 left-6">
+                  <motion.div 
+                    className="w-14 h-14 rounded-xl bg-black border-2 border-white flex items-center justify-center shadow-lg"
+                    whileHover={{ rotate: -10 }}
+                  >
+                    <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </motion.div>
+                </div>
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <p className="text-gray-400 text-sm mb-2 group-hover:text-gray-300 transition-colors">Thoughts, insights & updates</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-gold transition-colors">
+                    Twitter / X
+                  </h3>
+                </div>
+
+                {/* Hover Arrow */}
+                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="w-10 h-10 rounded-full bg-gold/20 backdrop-blur-sm flex items-center justify-center">
+                    <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.a>
+            </div>
+
+            {/* Social Handles */}
+            <div className="flex flex-wrap justify-center gap-8 mt-10">
+              <motion.a
+                href="https://instagram.com/legendstarrx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-gold transition-colors group"
+                whileHover={{ scale: 1.05 }}
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span className="font-semibold">@legendstarrx</span>
+              </motion.a>
+              <motion.a
+                href="https://twitter.com/legendstarrx"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-400 hover:text-gold transition-colors group"
+                whileHover={{ scale: 1.05 }}
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                <span className="font-semibold">@legendstarrx</span>
+              </motion.a>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Work With Me Showcase */}
+        <AnimatedSection delay={0.7}>
           <div className="mt-20 pt-20 border-t border-gold/20">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
