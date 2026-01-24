@@ -83,7 +83,7 @@ export default function WorkWithMe() {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gold">$100K+</div>
+                <div className="text-4xl md:text-5xl font-bold text-gold">$1M+</div>
                 <div className="text-sm text-gray-400">Revenue Generated</div>
               </div>
               <div className="text-center">
