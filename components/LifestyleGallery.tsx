@@ -12,33 +12,63 @@ import Button from './Button'
 const lifestyleImages = [
   {
     id: 1,
-    src: '/images/results/my lifestyle resultd/WhatsApp Image 2026-01-22 at 14.15.22.jpeg',
-    alt: 'Lifestyle',
-    category: 'lifestyle'
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.22.jpeg',
+    alt: 'Legendstarr'
   },
   {
     id: 2,
-    src: '/images/results/adx results/Screenshot 2026-01-22 144816.png',
-    alt: 'AdX Results - $90K',
-    category: 'results'
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.23.jpeg',
+    alt: 'Legendstarr'
   },
   {
     id: 3,
-    src: '/images/results/my lifestyle resultd/WhatsApp Image 2026-01-22 at 14.15.23.jpeg',
-    alt: 'Lifestyle',
-    category: 'lifestyle'
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.235.jpeg',
+    alt: 'Legendstarr'
   },
   {
     id: 4,
-    src: '/images/results/my lifestyle resultd/WhatsApp Image 2026-01-22 at 14.15.235.jpeg',
-    alt: 'Lifestyle',
-    category: 'lifestyle'
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.2d4.jpeg',
+    alt: 'Legendstarr'
   },
   {
     id: 5,
-    src: '/images/results/my lifestyle resultd/WhatsApp Image 2026-01-22 at 14.15.24.jpeg',
-    alt: 'Lifestyle',
-    category: 'lifestyle'
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15j.23.jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 6,
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-22 at 14.15.17.jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 7,
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.08.41.jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 8,
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.18.28 (1).jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 9,
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.41.45.jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 10,
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 12.41.59.jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 11,
+    src: '/images/results/lifestyle/WhatsApp Image 2026-01-24 at 19.56.27.jpeg',
+    alt: 'Legendstarr'
+  },
+  {
+    id: 12,
+    src: '/images/results/lifestyle/Screenshot 2026-01-22 144816.png',
+    alt: 'Results'
   },
 ]
 
@@ -60,10 +90,10 @@ export default function LifestyleGallery() {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              The <span className="text-gold">Lifestyle</span>
+              Get to <span className="text-gold">Know Me</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Building wealth isn't just about knowledge—it's about execution, mindset, and the results that follow.
+              A glimpse into my journey. Follow me on social media to see more.
             </p>
           </div>
         </AnimatedSection>
@@ -91,11 +121,11 @@ export default function LifestyleGallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                    Real Results. Real Lifestyle.
+                    Behind the Scenes
                   </h3>
                   <p className="text-lg text-gray-300 max-w-2xl">
-                    This isn't about showing off—it's about proving that the systems work. 
-                    When you execute correctly, the results speak for themselves.
+                    This is who I am—an entrepreneur building businesses and creating opportunities. 
+                    Want to know more? Check out my socials.
                   </p>
                 </div>
               </motion.div>
