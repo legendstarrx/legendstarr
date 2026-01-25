@@ -235,14 +235,14 @@ export default function LifestyleGallery() {
                           Learn More
                         </Button>
                       </Link>
-                      <Button 
-                        href="https://wa.me/2349064538679?text=Hi%20Legendstarr%2C%20I%20found%20you%20on%20your%20website%20and%20I%27d%20like%20to%20work%20with%20you%20to%20scale%20my%20business." 
-                        variant="secondary"
-                        external
-                        className="flex-1 text-lg py-4"
-                      >
-                        Chat on WhatsApp
-                      </Button>
+                      <Link href="/form" className="flex-1">
+                        <Button 
+                          variant="secondary"
+                          className="w-full text-lg py-4"
+                        >
+                          Apply Now
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>
