@@ -1,24 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 // Get API token from environment variable (set in Vercel dashboard or .env.local)
-// Add SENDER_API_TOKEN to your Vercel environment variables for production
 const SENDER_API_TOKEN = process.env.SENDER_API_TOKEN
 const SENDER_API_URL = 'https://api.sender.net/v2/subscribers'
 
-if (!SENDER_API_TOKEN) {
-  console.warn('SENDER_API_TOKEN is not set. Newsletter subscriptions will fail.')
-}
-
 export async function POST(request: NextRequest) {
   try {
+    // Check if token exists
     if (!SENDER_API_TOKEN) {
+      console.error('SENDER_API_TOKEN is not set')
       return NextResponse.json(
         { error: 'Newsletter service is not configured' },
         { status: 500 }
       )
     }
 
-    const { email } = await request.json()
+    const body = await request.json()
+    const { email } = body
 
     if (!email || !email.includes('@')) {
       return NextResponse.json(
@@ -26,6 +24,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    console.log('Attempting to subscribe:', email)
 
     // Add subscriber to Sender.net
     const response = await fetch(SENDER_API_URL, {
@@ -37,26 +37,42 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify({
         email: email,
-        // Optional: Add groups if you have specific groups in Sender
-        // groups: ['group_id_here'],
         trigger_automation: true,
       }),
     })
 
-    const data = await response.json()
+    // Get response text first
+    const responseText = await response.text()
+    console.log('Sender API response status:', response.status)
+    console.log('Sender API response:', responseText)
+
+    // Try to parse as JSON
+    let data
+    try {
+      data = JSON.parse(responseText)
+    } catch {
+      console.error('Failed to parse response as JSON:', responseText)
+      data = { message: responseText }
+    }
 
     if (!response.ok) {
-      // If subscriber already exists, that's okay - return success
-      if (response.status === 422 || (data.message && data.message.includes('already exists'))) {
+      // If subscriber already exists (status 422 or specific message)
+      if (response.status === 422 || 
+          response.status === 409 || 
+          (data.message && (
+            data.message.includes('already exists') || 
+            data.message.includes('duplicate') ||
+            data.message.includes('already subscribed')
+          ))) {
         return NextResponse.json(
           { message: 'You are already subscribed!' },
           { status: 200 }
         )
       }
       
-      console.error('Sender API error:', data)
+      console.error('Sender API error:', response.status, data)
       return NextResponse.json(
-        { error: 'Failed to subscribe. Please try again.' },
+        { error: data.message || 'Failed to subscribe. Please try again.' },
         { status: response.status }
       )
     }
