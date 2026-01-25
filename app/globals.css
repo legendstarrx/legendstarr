@@ -7,11 +7,25 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Ensure scrolling is never blocked */
+    overflow-x: hidden;
+    overflow-y: auto !important;
   }
   
   body {
     @apply bg-black text-white antialiased;
     font-family: 'Inter', system-ui, sans-serif;
+    /* Prevent body scroll lock */
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    /* Enable touch scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+  
+  /* Ensure main content can always scroll */
+  main, #__next, [data-nextjs-scroll-focus-boundary] {
+    overflow: visible !important;
   }
 }
 
@@ -19,4 +33,14 @@
   .text-balance {
     text-wrap: balance;
   }
+  
+  /* Utility class to allow vertical scrolling */
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
+}
+
+/* Fix for Framer Motion potentially blocking scroll */
+[style*="overflow: hidden"] {
+  overflow: auto !important;
 }

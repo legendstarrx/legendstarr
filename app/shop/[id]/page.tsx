@@ -15,7 +15,8 @@ export default function ProductPage() {
     <div className="pt-16 min-h-screen bg-black">
       {/* Coming Soon Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        {/* Background - pointer-events-none to not block scrolling */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black"></div>
           {/* Decorative background pattern */}
           <div className="absolute inset-0 opacity-10" style={{

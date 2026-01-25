@@ -1,17 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-// Get API key from environment variable (set in Vercel dashboard or .env.local)
-// Add BREVO_API_KEY to your Vercel environment variables for production
-const BREVO_API_KEY = process.env.BREVO_API_KEY
-const BREVO_API_URL = 'https://api.brevo.com/v3/contacts'
+// Get API token from environment variable (set in Vercel dashboard or .env.local)
+// Add SENDER_API_TOKEN to your Vercel environment variables for production
+const SENDER_API_TOKEN = process.env.SENDER_API_TOKEN
+const SENDER_API_URL = 'https://api.sender.net/v2/subscribers'
 
-if (!BREVO_API_KEY) {
-  console.warn('BREVO_API_KEY is not set. Newsletter subscriptions will fail.')
+if (!SENDER_API_TOKEN) {
+  console.warn('SENDER_API_TOKEN is not set. Newsletter subscriptions will fail.')
 }
 
 export async function POST(request: NextRequest) {
   try {
-    if (!BREVO_API_KEY) {
+    if (!SENDER_API_TOKEN) {
       return NextResponse.json(
         { error: 'Newsletter service is not configured' },
         { status: 500 }
@@ -27,33 +27,34 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Add contact to Brevo
-    const response = await fetch(BREVO_API_URL, {
+    // Add subscriber to Sender.net
+    const response = await fetch(SENDER_API_URL, {
       method: 'POST',
       headers: {
-        'accept': 'application/json',
-        'api-key': BREVO_API_KEY,
-        'content-type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${SENDER_API_TOKEN}`,
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         email: email,
-        listIds: [], // Add list IDs if you have specific lists in Brevo
-        updateEnabled: true, // Update contact if already exists
+        // Optional: Add groups if you have specific groups in Sender
+        // groups: ['group_id_here'],
+        trigger_automation: true,
       }),
     })
 
     const data = await response.json()
 
     if (!response.ok) {
-      // If contact already exists, that's okay - return success
-      if (response.status === 400 && data.message?.includes('already exists')) {
+      // If subscriber already exists, that's okay - return success
+      if (response.status === 422 || (data.message && data.message.includes('already exists'))) {
         return NextResponse.json(
           { message: 'You are already subscribed!' },
           { status: 200 }
         )
       }
       
-      console.error('Brevo API error:', data)
+      console.error('Sender API error:', data)
       return NextResponse.json(
         { error: 'Failed to subscribe. Please try again.' },
         { status: response.status }

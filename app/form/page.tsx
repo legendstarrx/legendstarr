@@ -25,8 +25,8 @@ export default function FormPage() {
     <div className="pt-16 min-h-screen bg-black">
       {/* Header Section */}
       <section className="py-12 md:py-16 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0">
+        {/* Background Effects - pointer-events-none to not block scrolling */}
+        <div className="absolute inset-0 pointer-events-none">
           <motion.div 
             className="absolute top-10 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl"
             animate={{ 

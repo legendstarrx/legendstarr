@@ -69,6 +69,19 @@ export default function LifestyleGallery() {
     return () => clearInterval(interval)
   }, [])
 
+  // Handle body scroll lock when modal is open
+  useEffect(() => {
+    if (selectedImage !== null) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [selectedImage])
+
   return (
     <section className="py-20 bg-black relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

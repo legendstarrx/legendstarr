@@ -1,14 +1,34 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import Button from '@/components/Button'
 import AnimatedSection from '@/components/AnimatedSection'
 import LifestyleGallery from '@/components/LifestyleGallery'
 import Newsletter from '@/components/Newsletter'
 
+// Generate particle positions on client side only
+function useParticles(count: number) {
+  const [particles, setParticles] = useState<Array<{ x: number; y: number; duration: number; delay: number }>>([])
+  
+  useEffect(() => {
+    const newParticles = [...Array(count)].map(() => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      duration: Math.random() * 3 + 2,
+      delay: Math.random() * 2
+    }))
+    setParticles(newParticles)
+  }, [count])
+  
+  return particles
+}
+
 export default function Home() {
+  const particles = useParticles(15) // Reduced from 20 to 15 for better performance
+
   return (
-    <>
+    <div className="touch-pan-y">
       {/* Hero Section with Video Background */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background Placeholder */}
@@ -26,34 +46,32 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1),transparent_70%)]"></div>
         </div>
 
-        {/* Animated Particles Effect */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => {
-            const randomX = typeof window !== 'undefined' ? Math.random() * window.innerWidth : Math.random() * 1920
-            const randomY = typeof window !== 'undefined' ? Math.random() * window.innerHeight : Math.random() * 1080
-            return (
+        {/* Animated Particles Effect - Only render on client */}
+        {particles.length > 0 && (
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            {particles.map((particle, i) => (
               <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-gold rounded-full"
                 initial={{
-                  x: randomX,
-                  y: randomY,
+                  x: particle.x,
+                  y: particle.y,
                   opacity: 0
                 }}
                 animate={{
-                  y: [null, randomY - 100],
+                  y: [particle.y, particle.y - 100],
                   opacity: [0, 1, 0],
                   scale: [0, 1, 0]
                 }}
                 transition={{
-                  duration: Math.random() * 3 + 2,
+                  duration: particle.duration,
                   repeat: Infinity,
-                  delay: Math.random() * 2
+                  delay: particle.delay
                 }}
               />
-            )
-          })}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -231,6 +249,6 @@ export default function Home() {
 
       {/* Newsletter Section */}
       <Newsletter />
-    </>
+    </div>
   )
 }
